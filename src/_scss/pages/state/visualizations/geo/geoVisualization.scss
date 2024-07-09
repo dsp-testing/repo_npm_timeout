@@ -1,0 +1,42 @@
+.geo__map-section {
+    margin-top: rem(10);
+    .map-container {
+        height: rem(378);
+        width: 100%;
+    }
+    @import "pages/search/results/visualizations/geo/map/map";
+    .visualization-tooltip {
+        @import "components/visualizations/tooltip/_tooltip";
+    }
+    .tooltip-spacer {
+        @media(min-width: $small-screen) {
+            top: rem(36);
+            left: rem(-16);
+        }
+        @media(min-width: $tablet-screen) {
+            top: rem(36);
+            left: rem(84);
+        }
+        @media(min-width: $medium-screen) {
+            top: rem(36);
+            left: rem(88);
+        }
+        @media(min-width: $large-screen) {
+            top: rem(36);
+            left: rem(98);
+        }
+    }
+    //HIDE THE MAPBOX COMPASS CONTROLS
+    & .mapboxgl-ctrl-compass {
+        display: none !important;
+    }
+    //Hide info button that was added after mapbox package update to v1.13.0
+    & .mapboxgl-ctrl-attrib-button {
+        display: none !important;
+    }
+
+    & .mapboxgl-ctrl-attrib {
+        display: none !important;
+    }
+    @import "./_message";
+}
